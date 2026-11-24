@@ -1,0 +1,1093 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(232, 106, 146, 0.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(221, 180, 210, 0.16),
+            transparent 30%
+        ),
+
+        #fff7fa;
+
+    color: #35232d;
+
+    min-height: 100vh;
+
+    padding: 30px 0 60px;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: #f9dce7;
+
+    filter: blur(80px);
+
+    top: -120px;
+    left: -100px;
+
+    opacity: 0.6;
+
+    z-index: -1;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: #eadcf5;
+
+    filter: blur(90px);
+
+    bottom: -140px;
+    right: -100px;
+
+    opacity: 0.5;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.form-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.form-header {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   AI BADGE
+========================= */
+
+.ai-badge {
+
+    display: inline-block;
+
+    background: #fde3ec;
+
+    color: #c44d77;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #f6cfdd;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.form-header h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    color: #54213d;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.form-header p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #765967;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+#predictionForm {
+
+    width: 100%;
+}
+
+
+/* =========================
+   INPUT GRID
+========================= */
+
+.input-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   INPUT CARD
+========================= */
+
+.input-box {
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid #f0dce4;
+
+    padding: 24px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(100, 55, 75, 0.06);
+
+    transition: 0.3s ease;
+
+    position: relative;
+}
+
+
+.input-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 24px;
+    right: 24px;
+
+    height: 2px;
+
+    background: #e86a92;
+
+    border-radius: 0 0 10px 10px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+
+.input-box:hover {
+
+    border-color: #eeb7ca;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 40px rgba(150, 70, 100, 0.09);
+}
+
+
+.input-box:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.input-box > label:first-child {
+
+    display: block;
+
+    color: #54213d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   NUMBER INPUT
+========================= */
+
+.input-box input[type="number"] {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    background: #fffafd;
+
+    border: 1px solid #e8d5de;
+
+    border-radius: 11px;
+
+    color: #35232d;
+
+    outline: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.input-box input::placeholder {
+
+    color: #b59da8;
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.input-box input[type="number"]:focus {
+
+    border-color: #e86a92;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(232, 106, 146, 0.10);
+}
+
+
+/* =========================
+   SMALL TEXT
+========================= */
+
+.input-box small {
+
+    display: block;
+
+    margin-top: 9px;
+
+    color: #977c88;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   IQ LINK
+========================= */
+
+.iq-link {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #d15c84;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+
+.iq-link:hover {
+
+    color: #e86a92;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   YES / NO TOGGLE
+========================= */
+
+.toggle-container {
+
+    display: flex;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+.toggle-container input {
+
+    display: none;
+}
+
+
+.toggle-option {
+
+    flex: 1;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fffafd;
+
+    border: 1px solid #e8d5de;
+
+    border-radius: 11px;
+
+    color: #765967;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.toggle-option:hover {
+
+    border-color: #e86a92;
+
+    color: #d15c84;
+}
+
+
+/* SELECTED OPTION */
+
+.toggle-container input:checked + .toggle-option {
+
+    background: #e86a92;
+
+    border-color: #e86a92;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(232, 106, 146, 0.22);
+}
+
+
+/* =========================
+   PREDICT BUTTON
+========================= */
+
+.predict-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin: 38px auto 0;
+
+    padding: 15px 18px 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #e86a92;
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(232, 106, 146, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   BUTTON ARROW
+========================= */
+
+.predict-btn span {
+
+    width: 31px;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    color: #e86a92;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.predict-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(232, 106, 146, 0.35);
+}
+
+
+.predict-btn:hover span {
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .input-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-container {
+
+        width: 92%;
+
+        padding: 20px 0;
+    }
+
+
+    .form-header {
+
+        margin-bottom: 35px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding-top: 15px;
+    }
+
+
+    .form-container {
+
+        width: 94%;
+    }
+
+
+    .form-header h1 {
+
+        font-size: 38px;
+    }
+
+
+    .form-header p {
+
+        font-size: 14px;
+    }
+
+
+    .input-box {
+
+        padding: 20px;
+    }
+
+
+    .input-box::before {
+
+        left: 20px;
+
+        right: 20px;
+    }
+
+
+    .predict-btn {
+
+        width: 100%;
+    }
+
+}
+
+/* =================================
+   PREDICTION POPUP
+================================= */
+
+.prediction-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(55, 20, 45, 0.35);
+
+    backdrop-filter: blur(7px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: fadeIn 0.3s ease;
+
+}
+
+
+.prediction-popup {
+
+    position: relative;
+
+    width: 390px;
+
+    max-width: 85%;
+
+    padding: 42px 35px 35px;
+
+    background: #fff8fc;
+
+    border: 1px solid rgba(225, 130, 180, 0.25);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(80, 20, 60, 0.25);
+
+    animation: popupIn 0.5s cubic-bezier(.17,.67,.3,1.3);
+
+    overflow: hidden;
+
+}
+
+
+/* Pink glow */
+
+.prediction-popup::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: #ffd8eb;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    top: -90px;
+    left: -70px;
+
+    opacity: 0.6;
+
+}
+
+
+.prediction-popup::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    background: #f9c5e0;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    bottom: -80px;
+    right: -60px;
+
+    opacity: 0.5;
+
+}
+
+
+/* Result circle */
+
+.result-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #f58abb,
+        #d95796
+    );
+
+    color: white;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 10px 25px rgba(217, 87, 150, 0.3);
+
+    animation: iconPop 0.7s ease;
+
+}
+
+
+.result-icon.neutral {
+
+    background: linear-gradient(
+        135deg,
+        #f5a9ca,
+        #d87da7
+    );
+
+}
+
+
+/* Heading */
+
+.prediction-popup h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    color: #54233f;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+}
+
+
+/* Description */
+
+.prediction-popup p {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #76586a;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0 auto 20px;
+
+}
+
+
+/* Small message */
+
+.success-message {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    background: #ffe5f1;
+
+    color: #bd4c80;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Button */
+
+.close-result {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #e86ca8,
+        #c94c88
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+.close-result:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(201, 76, 136, 0.3);
+
+}
+
+
+/* =================================
+   SPARKLES
+================================= */
+
+.celebration {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+
+.sparkle {
+
+    position: absolute;
+
+    color: #e77daf;
+
+    font-size: 22px;
+
+    animation: sparkleFloat 2s infinite ease-in-out;
+
+}
+
+
+.sparkle1 {
+
+    top: 25px;
+    left: 35px;
+
+}
+
+
+.sparkle2 {
+
+    top: 45px;
+    right: 40px;
+
+    animation-delay: 0.4s;
+
+}
+
+
+.sparkle3 {
+
+    bottom: 95px;
+    left: 45px;
+
+    animation-delay: 0.8s;
+
+}
+
+
+/* =================================
+   CONFETTI
+================================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 10000;
+
+    pointer-events: none;
+
+    color: #e778aa;
+
+    animation: confettiFall 3.2s linear forwards;
+
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes popupIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            translateY(30px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes iconPop {
+
+    0% {
+
+        transform: scale(0);
+
+    }
+
+    70% {
+
+        transform: scale(1.15);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes sparkleFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0.5;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(15deg);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(105vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}

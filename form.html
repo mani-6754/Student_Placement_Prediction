@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Details | Placemate AI</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FORM CONTAINER
+    ========================== -->
+
+    <div class="form-container">
+
+
+        <!-- HEADER -->
+
+        <div class="form-header">
+
+            <div class="ai-badge">
+                ✦ AI PREDICTION
+            </div>
+
+
+            <h1>
+                Tell us about yourself
+            </h1>
+
+
+            <p>
+                Enter your academic and personal details
+                to predict your placement possibility.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             FORM
+        ========================== -->
+
+        <form id="predictionForm">
+
+
+            <div class="input-grid">
+
+
+                <!-- IQ -->
+
+                <div class="input-box">
+
+                    <label for="iq">
+                        IQ Score
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="iq"
+                        name="iq"
+                        min="41"
+                        max="158"
+                        placeholder="41 - 158"
+                        required
+                    >
+
+
+                    <small>
+                        Enter your IQ score
+                    </small>
+
+
+                    <a
+                        href="https://www.mensa.org/mensa-iq-challenge/"
+                        target="_blank"
+                        class="iq-link"
+                    >
+
+                        Don't know your IQ?
+                        Take a quick IQ test →
+
+                    </a>
+
+                </div>
+
+
+                <!-- PREVIOUS SEMESTER -->
+
+                <div class="input-box">
+
+                    <label for="previousResult">
+
+                        Previous Semester Result
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="previousResult"
+                        name="previousResult"
+                        min="5"
+                        max="10"
+                        step="0.01"
+                        placeholder="5 - 10"
+                        required
+                    >
+
+
+                    <small>
+                        Scale: 5 to 10
+                    </small>
+
+                </div>
+
+
+                <!-- CGPA -->
+
+                <div class="input-box">
+
+                    <label for="cgpa">
+                        CGPA
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="cgpa"
+                        name="cgpa"
+                        min="5"
+                        max="10"
+                        step="0.01"
+                        placeholder="5 - 10"
+                        required
+                    >
+
+
+                    <small>
+                        Current CGPA
+                    </small>
+
+                </div>
+
+
+                <!-- ACADEMIC PERFORMANCE -->
+
+                <div class="input-box">
+
+                    <label for="academic">
+
+                        Academic Performance
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="academic"
+                        name="academic"
+                        min="1"
+                        max="10"
+                        step="0.1"
+                        placeholder="1 - 10"
+                        required
+                    >
+
+
+                    <small>
+                        Rate your academic performance
+                    </small>
+
+                </div>
+
+
+                <!-- INTERNSHIP -->
+
+                <div class="input-box">
+
+                    <label>
+                        Internship Experience
+                    </label>
+
+
+                    <div class="toggle-container">
+
+
+                        <!-- YES -->
+
+                        <input
+                            type="radio"
+                            id="internYes"
+                            name="internship"
+                            value="1"
+                            required
+                        >
+
+                        <label
+                            for="internYes"
+                            class="toggle-option"
+                        >
+
+                            Yes
+
+                        </label>
+
+
+                        <!-- NO -->
+
+                        <input
+                            type="radio"
+                            id="internNo"
+                            name="internship"
+                            value="0"
+                        >
+
+                        <label
+                            for="internNo"
+                            class="toggle-option"
+                        >
+
+                            No
+
+                        </label>
+
+
+                    </div>
+
+
+                    <small>
+                        Have you completed an internship?
+                    </small>
+
+                </div>
+
+
+                <!-- EXTRA CURRICULAR -->
+
+                <div class="input-box">
+
+                    <label for="extra">
+
+                        Extra-Curricular Activities
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="extra"
+                        name="extra"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="0 - 10"
+                        required
+                    >
+
+
+                    <small>
+                        Rate your participation
+                    </small>
+
+                </div>
+
+
+                <!-- COMMUNICATION -->
+
+                <div class="input-box">
+
+                    <label for="communication">
+
+                        Communication Skills
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="communication"
+                        name="communication"
+                        min="1"
+                        max="10"
+                        step="0.1"
+                        placeholder="1 - 10"
+                        required
+                    >
+
+
+                    <small>
+                        Rate your communication skills
+                    </small>
+
+                </div>
+
+
+                <!-- PROJECTS -->
+
+                <div class="input-box">
+
+                    <label for="projects">
+
+                        Projects Completed
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="projects"
+                        name="projects"
+                        min="0"
+                        max="5"
+                        placeholder="0 - 5"
+                        required
+                    >
+
+
+                    <small>
+                        Number of completed projects
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PREDICT BUTTON -->
+
+            <button
+                type="submit"
+                class="predict-btn"
+            >
+
+                PREDICT PLACEMENT
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        document
+            .getElementById("predictionForm")
+            .addEventListener("submit", async function(event) {
+
+                event.preventDefault();
+
+
+                // Collect form data
+
+                const data = {
+
+                    IQ: parseFloat(
+                        document.getElementById("iq").value
+                    ),
+
+                    Prev_Sem_Result: parseFloat(
+                        document.getElementById("previousResult").value
+                    ),
+
+                    CGPA: parseFloat(
+                        document.getElementById("cgpa").value
+                    ),
+
+                    Academic_Performance: parseFloat(
+                        document.getElementById("academic").value
+                    ),
+
+                    Internship_Experience: parseInt(
+                        document.querySelector(
+                            'input[name="internship"]:checked'
+                        ).value
+                    ),
+
+                    Extra_Curricular_Score: parseFloat(
+                        document.getElementById("extra").value
+                    ),
+
+                    Communication_Skills: parseFloat(
+                        document.getElementById("communication").value
+                    ),
+
+                    Projects_Completed: parseInt(
+                        document.getElementById("projects").value
+                    )
+
+                };
+
+
+                console.log("Sending data:", data);
+
+
+                // =========================
+                // SEND DATA TO FLASK
+                // =========================
+
+                try {
+
+                    const response = await fetch(
+                        "http://127.0.0.1:5000/predict",
+                        {
+
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify(data)
+
+                        }
+                    );
+
+
+                    const result = await response.json();
+
+
+                    console.log("Server response:", result);
+
+
+                    if (response.ok) {
+
+                        showPrediction(result.prediction);
+
+                    }
+
+                    else {
+
+                        showPrediction("Error");
+
+                    }
+
+
+                }
+
+                catch (error) {
+
+                    console.error("Connection error:", error);
+
+                    showPrediction("Connection Error");
+
+                }
+
+            });
+
+
+
+    /* =========================
+       SHOW PREDICTION POPUP
+    ========================= */
+
+    function showPrediction(prediction) {
+
+        const overlay = document.createElement("div");
+
+        overlay.className = "prediction-overlay";
+
+
+        const popup = document.createElement("div");
+
+        popup.className = "prediction-popup";
+
+
+        // =========================
+        // PLACED
+        // =========================
+
+        if (prediction === "Placed") {
+
+            popup.innerHTML = `
+
+                <div class="celebration">
+
+                    <span class="sparkle sparkle1">
+                        ✦
+                    </span>
+
+                    <span class="sparkle sparkle2">
+                        ✧
+                    </span>
+
+                    <span class="sparkle sparkle3">
+                        ♡
+                    </span>
+
+                </div>
+
+
+                <div class="result-icon">
+                    ✓
+                </div>
+
+
+                <h2>
+                    You're Placed! 🎉
+                </h2>
+
+
+                <p>
+                    Congratulations! Your profile shows
+                    a strong placement potential.
+                </p>
+
+
+                <div class="success-message">
+                    ✦ Your hard work is paying off ✦
+                </div>
+
+
+                <button class="close-result">
+                    Continue
+                </button>
+
+            `;
+
+        }
+
+
+        // =========================
+        // NOT PLACED
+        // =========================
+
+        else if (prediction === "Not Placed") {
+
+            popup.innerHTML = `
+
+                <div class="result-icon neutral">
+                    ♡
+                </div>
+
+
+                <h2>
+                    Keep Going! 🌸
+                </h2>
+
+
+                <p>
+                    Your current profile may need a little
+                    more improvement for placement.
+                </p>
+
+
+                <div class="success-message">
+                    ✦ Every step brings you closer ✦
+                </div>
+
+
+                <button class="close-result">
+                    Continue
+                </button>
+
+            `;
+
+        }
+
+
+        // =========================
+        // ERROR
+        // =========================
+
+        else {
+
+            popup.innerHTML = `
+
+                <div class="result-icon neutral">
+                    !
+                </div>
+
+
+                <h2>
+                    Something went wrong
+                </h2>
+
+
+                <p>
+                    Please make sure the AI model is running
+                    and try again.
+                </p>
+
+
+                <button class="close-result">
+                    Close
+                </button>
+
+            `;
+
+        }
+
+
+        overlay.appendChild(popup);
+
+        document.body.appendChild(overlay);
+
+
+        // =========================
+        // CLOSE POPUP
+        // =========================
+
+        popup
+            .querySelector(".close-result")
+            .addEventListener("click", function() {
+
+                overlay.remove();
+
+            });
+
+
+        // Close when clicking outside
+
+        overlay.addEventListener("click", function(event) {
+
+            if (event.target === overlay) {
+
+                overlay.remove();
+
+            }
+
+        });
+
+
+        // =========================
+        // CELEBRATION
+        // =========================
+
+        if (prediction === "Placed") {
+
+            createConfetti();
+
+        }
+
+    }
+
+
+
+    /* =========================
+       CONFETTI
+    ========================= */
+
+    function createConfetti() {
+
+        const symbols = [
+            "✦",
+            "✧",
+            "♡",
+            "♥",
+            "✿",
+            "•"
+        ];
+
+
+        for (let i = 0; i < 35; i++) {
+
+            const confetti =
+                document.createElement("span");
+
+
+            confetti.className =
+                "confetti";
+
+
+            confetti.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() * symbols.length
+                    )
+                ];
+
+
+            confetti.style.left =
+                Math.random() * 100 + "vw";
+
+
+            confetti.style.animationDelay =
+                Math.random() * 0.8 + "s";
+
+
+            confetti.style.fontSize =
+                (12 + Math.random() * 12) + "px";
+
+
+            document.body.appendChild(confetti);
+
+
+            setTimeout(function() {
+
+                confetti.remove();
+
+            }, 3500);
+
+        }
+
+    }
+
+    </script>
+
+
+</body>
+
+</html>
